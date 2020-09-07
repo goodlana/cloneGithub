@@ -9,20 +9,6 @@
 a {
   text-decoration: none; /*밑줄. 중간선 등 모든 선을 사용하지 않음*/
 }
-/*FLOAT CLEARFIX*/
-.clearfix::after {
-  content:"";
-  clear: both;
-  display: block;
-}
-.float--left {
-  float: left;
-}
-
-.float--right {
-  float: right;
-}
-
 
 /* BUTTON */
 .btn {
@@ -67,7 +53,6 @@ a {
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
   font-size: 16px;
 }
-
 .input--text:focus {
   border-color:#51a7e8;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075), 
@@ -81,6 +66,51 @@ webkit = 크롬, ms= ie, edge, moz=파이어폭스, o=오페라*/
 .input--text::-ms-input-placeholder { color:#cacaca;}
 .input--text::-moz-input-placeholder { color:#cacaca;}
 
+/*FLOAT CLEARFIX*/
+.clearfix::after {
+  content:"";
+  clear: both;
+  display: block;
+}
+.float--left {
+  float: left;
+}
+
+.float--right {
+  float: right;
+}
+
+/*SUMMARY*/
+/* .summary {
+
+} */
+.summary__title {
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 18px;;
+
+}
+.summary__description {
+  font-size: 26px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
+}
+
+/* SECTION & INNER */
+.section {
+  position: relative; /*위치 기준을 자기 자신으로 설정하기 때문에 레이아웃에 영향을 주지 않음. 그리고 내부 요소에 position:absolute를 쓰기 위함*/
+}
+.section .inner {
+  max-width: 980px;
+  margin: 0 auto; /*세로, 가로*/
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+
 
 /* HEADER */
 header {
@@ -91,7 +121,7 @@ header {
 header .inner {
   max-width: 980px;
   height: 78px;
-  margin: 0 auto; /*max-width가 화면에 중앙으로 정렬됨. 사용하려면 width/max-width가 정의되어야 함.*/
+  margin: 0 auto; /*max-width가 화면에 중앙으로 정렬됨. 사용하려면 width나 max-width가 정의되어야 함.*/
 }
 header .menu-group { /*조상-후손관계, 부모-자식으로 안함 불편~*/
   display: flex; /*여기 안에 있는 자식요소들은 수평으로 설정됨*/
@@ -161,4 +191,76 @@ header .sub-menu li a {
 }
 header .sub-menu li a:hover {
   color: #4078c4;
+}
+
+/*VISUAL*/
+.section--visual {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover; /*추천!! viewport를 아무리 늘리거나 줄여도 비율에 맞게 늘리거나 줄여서 선택한 영역 전체가 덮이도록*/
+}
+.section--visual::before { /*배경 이미지 앞에 살짝 어둡게 깔아서 조절.*/
+  content:"";
+  position: absolute; /*부모인 section--visual에는 position:relative가 없지만 그 위의 조상(section)에는 있다.*/
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+.section--visual .inner {
+  width: 980px;
+  margin: 0 auto;
+  padding: 160px 0;
+  display: flex; /*자식을 수평정렬로*/
+}
+.section--visual .summary {
+  flex: 1; /*flex-grow: 1; flex-basis:0과 같음 */
+  margin-right: 90px;
+}
+.section--visual .summary__title {
+  color: #fff;
+  font-size: 54px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25),
+              0 1px 25px rgba(0,0,0,0.75); 
+              /*x축 y축 blur 색상. 중복사용 가능.*/
+}
+.section--visual .summary__description {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25),
+              0 1px 25px rgba(0,0,0,0.75); 
+              /*x축 y축 blur 색상. 중복사용 가능.*/
+}
+#sign-form {
+  width: 340px;
+  margin-top: 16px;
+}
+#sign-form li {
+  margin-bottom: 17px;
+}
+#sign-form li:last-child {
+  margin-bottom: 0;
+}
+#sign-form .input--text {
+  width: 100%;
+  height: 40px;
+}
+#sign-form .caption {
+  font-style: 12px;
+  margin-top: 5px;
+  color: rgba(255,255,255,.6);
+  line-height: 1.5;
+  text-align: center;
+}
+#sign-form [type="submit"] { /*속성선택자*/
+  width: 100%;
+  height: 62px;
+  padding: 0 25px;
+  font-size: 20px;
+  /*flexible 박스에서 자식을 수평정렬 하려면 justify-content를 써야한다;*/
+  justify-content: center;
+
 }

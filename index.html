@@ -38,9 +38,43 @@
 </head>
 <body>
 <!--body는 범위를 나타내기 때문에 스타일을 많이 가지고 있는 것이 좋지 않음. body대신 사용할 것-->
+
 <div class="body__container"> 
 
-hello
+  <!--HEADER-->
+  <header class="section">
+    <div class="inner clearfix">
+      
+      <div class="menu-group float--left">
+        <div class="logo">
+          <a href="#">Github</a>
+        </div>
+        <ul class="main-menu">
+          <li><a href="#">Personal</a></li>
+          <li><a href="#">Open Source</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Explore</a></li>
+        </ul>
+      </div>
+
+      <div class="sign-group float--right">
+        <div class="btn-group">
+          <a href="" class="btn sign-in">Sign in</a>
+          <a href="" class="btn btn--primary sign-up">Sign up</a>
+        </div>
+        <form id="search-form" method="POST" action="">
+          <input type="text" id="search" class="input--text" placeholder="Search GitHub">
+          <input type="submit" value="submit"> <!--화면에 나오지만 숨겨야함-->
+        </form>
+        <ul class="sub-menu">
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
 </div>
 </body>
 </html>

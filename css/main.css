@@ -6,13 +6,31 @@
   color: #333;
 }
 
+a {
+  text-decoration: none; /*밑줄. 중간선 등 모든 선을 사용하지 않음*/
+}
+/*FLOAT CLEARFIX*/
+.clearfix::after {
+  content:"";
+  clear: both;
+  display: block;
+}
+.float--left {
+  float: left;
+}
+
+.float--right {
+  float: right;
+}
+
+
 /* BUTTON */
 .btn {
   height: 34px;
   background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
   border: 1px solid #d5d5d5;
   border-radius: 4px;
-  display: inline-flex;/*컨텐츠 너비만큼만   */
+  display: inline-flex;/*컨텐츠 너비만큼만, inline의 속성을 가짐. html상 엔터를 띄어쓰기로 인식함.   */
   align-items: center;
   padding: 0 12px;
   font-size: 14px;
@@ -21,6 +39,7 @@
   cursor: pointer;
   box-sizing: border-box;
   position:relative;
+  color: #333;
 }
 .btn:hover::before {
   content:"";
@@ -61,3 +80,85 @@ webkit = 크롬, ms= ie, edge, moz=파이어폭스, o=오페라*/
 .input--text::-webkit-input-placeholder { color:#cacaca;}
 .input--text::-ms-input-placeholder { color:#cacaca;}
 .input--text::-moz-input-placeholder { color:#cacaca;}
+
+
+/* HEADER */
+header {
+  border-bottom: 1px solid rgba(0,0,0,.75);
+  box-shadow: 0 0 5px rgba(0,0,0,.75);
+  background: #fff;
+}
+header .inner {
+  max-width: 980px;
+  height: 78px;
+  margin: 0 auto; /*max-width가 화면에 중앙으로 정렬됨. 사용하려면 width/max-width가 정의되어야 함.*/
+}
+header .menu-group { /*조상-후손관계, 부모-자식으로 안함 불편~*/
+  display: flex; /*여기 안에 있는 자식요소들은 수평으로 설정됨*/
+  align-items: center; /*수직 중앙*/
+  height: 100%; /* 부모의 영향을 받음*/
+}
+header .logo {
+  margin-right: 10px;
+}
+header .logo a {
+  background: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+  text-indent: -9999px;/* 들여쓰기를 사용하여 텍스트를 대체텍스트처럼 사용하기. */
+}
+header .logo a:hover {
+  background: url("../img/logo_on.svg");
+}
+header .main-menu {
+  display: flex;
+}
+header .main-menu li a { /*클릭 범위를 확장하자*/
+  display: block; /*padding의 값을 사용하기 위함*/
+  padding: 10px;
+  color: #3c4146;
+}
+header .main-menu li a:hover {
+  color: #4078c4
+}
+header .sign-group {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header .btn-group {
+  order: 2; /*숫자가 클수록 뒤로 밀려남*/
+  display: flex; /*btn - inline flex의 띄어쓰기 말고 수평으로 만들기 위함.*/
+}
+header .btn-group .sign-in {
+  margin-right: 4px;
+}
+#search-form {
+  order: 1;
+  margin-right: 10px;
+}
+#search {
+  width: 160px;
+  font-size: 14px;
+}
+#search + [type="submit"] { /*#search의 다음 형제 요소이며 type="submit"을 선택한다*/
+  display: none;
+}
+.sub-menu {
+  order: 0;
+  margin-right: 10px;
+}
+header .sub-menu {
+  display: flex;
+}
+header .sub-menu li a {
+  padding: 8px;
+  display: block;
+  font-size: 13px;
+  color: #3c4146;
+}
+header .sub-menu li a:hover {
+  color: #4078c4;
+}

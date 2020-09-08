@@ -1,9 +1,9 @@
 # cloneGithub
--소개
+- 소개
 
 GitHub 구버전 사이트를 클론합니다.
 
--목적
+- 목적
 
 1. HTML5와 CSS3의 심도있는 학습.
 2. Javascript를 활용한 순수 DOM 구현.

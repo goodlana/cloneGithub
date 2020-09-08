@@ -1,0 +1,46 @@
+/*COMMON*/
+.summary__title {
+  font-size: 34px !important; /*important의 점수는 무한대*/
+}
+.summary__description {
+  font-size: 20px;
+}
+
+/*FEATURE*/
+.section--feature .tiles li {
+  width: 100%; /*4*1로 정렬*/
+  border-right: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/*WHERE IS*/
+#map { /* !! 중요 !! 잘 봐야해  */
+  width: auto; /*100%로 적을 경우 부모의 크기를 따라가기 때문에, */
+  margin: 40px -20px 0 -20px; /*medium에서 좌우 여백을 20씩 줬던 상태였기 때문에*/
+  border-left: none;
+  border-right: none;
+}
+
+/*PRICING*/
+.section--pricing .card {
+  display: block;
+}
+.section--pricing .card .cell2 {
+  border-left: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+/*FOOTER*/
+footer .site-links {
+  float: none;
+  display: block;
+  text-align: center;
+  /* justify-content: center;  */  /*display:flex니까*/ 
+}
+footer .site-links:first-child{
+  margin-bottom: 20px;
+}
+footer .site-links li {
+  display: inline; 
+  /*위에서 display:block으로 만들어버려서 */
+}

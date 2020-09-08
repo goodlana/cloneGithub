@@ -1,0 +1,124 @@
+
+/*MEDIA*/
+/*@media (max-width: 1024px) { 1024px 이하일 때 아래의 사항 적용*/
+  header.section .inner { /*명시도(우선순위) 점수를 올리기 위해 .section을 덧붙인다 ==> 21점*/
+    max-width: none;/*상단의 .section .inner의 너비가 max-width로 정의되어 있으니, 초기화를 시키려면 당연히 max-width를 사용해야함*/
+    height: auto;
+    padding: 0 20px;
+  }
+  header .menu-group, /*다중 선택자 쓸 때에는 엔터 사용해주기*/
+  header .sign-group {
+    float: none;
+  }
+  header .menu-group {
+    display: block;
+  }
+  header .logo{
+    padding: 12px 0 22px;;
+
+  }
+  header .main-menu {
+    display: block;
+    margin-bottom: 10px;
+  }
+  header .main-menu li {
+    border-top: 1px solid #e5e5e5
+  }
+  header .main-menu li a { /*눌리는 부분 영역을 늘림*/
+    padding: 16px 0;
+  }
+  header .sign-group {
+    display: block;
+    padding: 10px 0 20px; 
+  }
+  #search-form {
+    margin-top: 12px;
+    margin-right: 0;
+  }
+  #search {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+  }
+  header .sub-menu {
+    margin-top: 12px;
+    margin-right: 0;
+    justify-content: center;
+  }
+  header .btn-group {
+    display: block;
+  }
+  header .btn-group .btn {
+    justify-content: center;
+  }
+  header .btn-group .sign-in {
+    margin-right: 0; /*오른쪽 여백 없앰*/
+    margin-bottom: 12px;
+  }
+  header .toggle {
+    display: none;
+  }
+  header .toggle.on {
+    display: block;
+  }
+  #toggle-btn {
+    display:block;
+  }
+
+  /*VISUAL*/
+  .section--visual {
+    background-image: url("../img/bg-small.jpg");
+  }
+  .section--visual .inner {
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
+  }
+  .section--visual .summary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  #sign-form {
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto; /* width 값이 있으니까 이렇게 중앙정렬 가능.*/
+  }
+
+  /*FEATURE*/
+  .section-feature .summary {
+    padding: 66px 20px 0 20px;
+  }
+  .section--feature .tiles li {
+    width: 50%;
+  }
+  .section--feature .tiles li:nth-child(2) {
+    border-right: none;
+  }
+  .section--feature .tiles li img {
+    padding: 14px 30% 24px;
+  }
+
+  /*WHERE IS*/
+  .section--where-is .inner {
+    max-width: none;
+    padding: 80px 20px 0 20px;
+  }
+
+  /* PRICING CARD */
+  .section--pricing .inner {
+    max-width: none;
+    padding: 80px 20px;
+  }
+  .section--pricing .card {
+    font-size: 20px;
+  }
+
+  /*FOOTER*/
+  footer .inner {
+    padding: 50px 20px;
+  }
+  footer .logo {
+    display: none;
+  }
+/* } */

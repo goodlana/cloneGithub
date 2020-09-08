@@ -34,7 +34,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"><!--호출을 main.css보다 먼저해야함.-->
   <link rel="stylesheet" href="css/main.css">
-
+  
+  <script defer src="./main.js"></script> <!-- defer = html문서를 다 읽고 나서 이 script파일을 실행하겠다.-->
 </head>
 <body>
 <!--body는 범위를 나타내기 때문에 스타일을 많이 가지고 있는 것이 좋지 않음. body대신 사용할 것-->
@@ -49,15 +50,15 @@
         <div class="logo">
           <a href="#">Github</a>
         </div>
-        <ul class="main-menu">
+        <ul class="main-menu toggle">
           <li><a href="#">Personal</a></li>
-          <li><a href="#">Open Source</a></li>
+          <li><a href="#">Open source</a></li>
           <li><a href="#">Business</a></li>
           <li><a href="#">Explore</a></li>
         </ul>
       </div>
 
-      <div class="sign-group float--right">
+      <div class="sign-group float--right toggle">
         <div class="btn-group">
           <a href="" class="btn sign-in">Sign in</a>
           <a href="" class="btn btn--primary sign-up">Sign up</a>
@@ -72,6 +73,8 @@
           <li><a href="#">Support</a></li>
         </ul>
       </div>
+
+      <div id="toggle-btn">Header Menu Toggle button</div>
     </div>
   </header>
 
@@ -232,7 +235,7 @@
       lng: -122.391240
     }
 
-    const map = new google.maps.Map(
+    const map = new google.maps.Map( //지도 좌표 설정
       document.getElementById("map"), 
         {
           center: myLatLng,
@@ -240,7 +243,7 @@
           zoom: 18
         }
     );
-    const marker = new google.maps.Marker(
+    const marker = new google.maps.Marker( //지도 위 마커 설정
       {
         position: myLatLng,
         map: map,

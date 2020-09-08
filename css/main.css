@@ -333,9 +333,6 @@ header .sub-menu li a:hover {
 }
 
 /* WHERE IS */
-.section--where-is {
-
-}
 .section--where-is .inner {
   padding-top: 80px;
 }
@@ -343,9 +340,79 @@ header .sub-menu li a:hover {
   width: 100%;
   height: 400px;
   margin-top: 40px;
-  margin-bottom: 80px;
   border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   box-shadow: 0 0 20px rgba(53, 10, 10, 0.2);
   box-sizing: border-box;
+}
+
+/* Pricing card */
+
+.section--pricing {
+  background: linear-gradient(#f5f5f5, #fff);
+}
+.section--pricing .inner{
+  padding: 80px 0;
+}
+.section--pricing .card {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1)
+}
+.section--pricing .card .cell {
+  padding: 24px;
+  display: flex; /*안에 자식 요소들을 수평정렬*/
+  justify-content: center; /* 안에 자식 요소들을 수평 중앙*/
+  align-items: center; /*안에 자식 요소들을 수직 중앙*/
+}
+
+.section--pricing .card .cell1 .btn{
+  height: 50px;
+  font-size: 16px;
+}
+.section--pricing .card .cell2 {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  flex:1; /*flex-grow:1 flex-basis:0인 상태*/
+  border-left: 1px solid #e5e5e5;
+}
+
+/* FOOTER */
+footer {
+
+}
+footer .inner {
+  padding: 50px 0;
+  border-top: 1px solid #eee;
+}
+footer .site-links {
+  display:flex;
+}
+footer .site-links li{
+  font-size: 12px;
+  margin-right: 10px;
+  color: #767676;
+}
+footer .site-links li a {
+  color: #4078c0;
+}
+footer .site-links li a:hover {
+  text-decoration: underline;
+}
+footer .logo { /*inner의 정가운데 배치하자*/
+  position: absolute; /*absolute는 부모 기준이므로 부모요소 relative인지 확인한 후에 사용*/
+  /*top0 bottom0 left0 right0 전체 영역을 다 사용함*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; /*위아래왼오른쪽 다 auto 한 이후에 너비,높이를 설정해줘야 가운데 정렬이 됨*/
+  width: 24px; /*로고 너비만큼*/
+  height: 24px; /*로고 높이만큼*/
+}
+footer .logo:hover svg{
+  /*svg의 색을 채우는 속성*/
+  fill: #4078c0;
 }

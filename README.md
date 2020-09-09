@@ -2,7 +2,9 @@
 ---
 ## 🎤소개
 GitHub 메인 클론합니다.
-[](https://bit.ly/3m6FXiw)
+[Link][bitly]
+[bitly]: "https://bit.ly/3m6FXiw"
+cf) API 키는 공개용으로 사용함.
 
 ## 🥅목적
 1. HTML5와 CSS3의 심도있는 학습.

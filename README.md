@@ -11,8 +11,8 @@ cf) 구글 맵 API키 - 기존 공개용.
 
 ## ✅적용사항
 1. large / medium / small device 크기에 따른 반응형 웹 구현
-  1) 미디어쿼리, 미디어옵션
-  2) resize 이벤트
-  3) Flex, Grid, Float 활용하여 Tiles 컬럼 변화 구성
+__1)미디어쿼리, 미디어옵션
+__2)resize 이벤트
+__3)Flex, Grid, Float 활용하여 Tiles 컬럼 변화 구성
 2. 로고에 활용할 svg태그와 fill속성 사용
 3. Google map API 적용

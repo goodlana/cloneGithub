@@ -2,8 +2,7 @@
 ---
 ## 🎤소개
 GitHub 메인 클론합니다.
-[Link][bitly]
-[bitly]: "https://bit.ly/3m6FXiw"
+[Link]("https://bit.ly/3m6FXiw")
 cf) API 키는 공개용으로 사용함.
 
 ## 🥅목적
